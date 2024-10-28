@@ -28,4 +28,50 @@ final class ViewControllerFactory {
         viewController.viewModel = assembler.resolver.resolve(IOnboardingViewModel.self)
         return viewController
     }
+
+    //MARK: - TabBar
+    static func makeTabBarViewController() -> TabBarViewController {
+        let viewController = TabBarViewController()
+        return viewController
+    }
+
+    //MARK: Dashboard
+    static func makeDashboardViewController() -> DashboardViewController {
+        let assembler = Assembler(commonAssemblies + [DashboardAssembly()])
+        let viewController = DashboardViewController()
+        viewController.viewModel = assembler.resolver.resolve(IDashboardViewModel.self)
+        return viewController
+    }
+
+    //MARK: Match
+    static func makeMatchViewController() -> MatchViewController {
+        let assembler = Assembler(commonAssemblies + [MatchAssembly()])
+        let viewController = MatchViewController()
+        viewController.viewModel = assembler.resolver.resolve(IMatchViewModel.self)
+        return viewController
+    }
+
+    //MARK: Event
+    static func makeEventViewController() -> EventViewController {
+        let assembler = Assembler(commonAssemblies + [EventAssembly()])
+        let viewController = EventViewController()
+        viewController.viewModel = assembler.resolver.resolve(IEventViewModel.self)
+        return viewController
+    }
+
+    //MARK: Statistic
+    static func makeStatisticViewController() -> StatisticViewController {
+        let assembler = Assembler(commonAssemblies + [StatisticAssembly()])
+        let viewController = StatisticViewController()
+        viewController.viewModel = assembler.resolver.resolve(IStatisticViewModel.self)
+        return viewController
+    }
+
+    //MARK: Players
+    static func makePlayersViewController() -> PlayersViewController {
+        let assembler = Assembler(commonAssemblies + [PlayersAssembly()])
+        let viewController = PlayersViewController()
+        viewController.viewModel = assembler.resolver.resolve(IPlayersViewModel.self)
+        return viewController
+    }
 }

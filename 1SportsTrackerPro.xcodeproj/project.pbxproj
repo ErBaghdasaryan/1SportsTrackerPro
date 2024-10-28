@@ -42,6 +42,22 @@
 		CCC1158D2CCB96340099D384 /* OnboardingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC1158C2CCB96340099D384 /* OnboardingAssembly.swift */; };
 		CCC1158F2CCB963D0099D384 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC1158E2CCB963D0099D384 /* OnboardingRouter.swift */; };
 		CCC115912CCB96440099D384 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115902CCB96440099D384 /* OnboardingCell.swift */; };
+		CCC115942CCFCF980099D384 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115932CCFCF980099D384 /* TabBarViewController.swift */; };
+		CCC1159D2CD008400099D384 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC1159C2CD008400099D384 /* PlayersViewController.swift */; };
+		CCC1159F2CD008470099D384 /* PlayersAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC1159E2CD008470099D384 /* PlayersAssembly.swift */; };
+		CCC115A12CD0084D0099D384 /* PlayersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115A02CD0084D0099D384 /* PlayersRouter.swift */; };
+		CCC115A32CD008560099D384 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115A22CD008560099D384 /* StatisticViewController.swift */; };
+		CCC115A52CD0085E0099D384 /* StatisticRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115A42CD0085E0099D384 /* StatisticRouter.swift */; };
+		CCC115A72CD008660099D384 /* StatisticAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115A62CD008660099D384 /* StatisticAssembly.swift */; };
+		CCC115A92CD0086F0099D384 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115A82CD0086F0099D384 /* EventViewController.swift */; };
+		CCC115AB2CD008750099D384 /* EventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115AA2CD008750099D384 /* EventRouter.swift */; };
+		CCC115AD2CD0087B0099D384 /* EventAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115AC2CD0087B0099D384 /* EventAssembly.swift */; };
+		CCC115AF2CD008860099D384 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115AE2CD008860099D384 /* MatchViewController.swift */; };
+		CCC115B12CD0088D0099D384 /* MatchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115B02CD0088D0099D384 /* MatchRouter.swift */; };
+		CCC115B32CD008940099D384 /* MatchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115B22CD008940099D384 /* MatchAssembly.swift */; };
+		CCC115B52CD0089E0099D384 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115B42CD0089E0099D384 /* DashboardViewController.swift */; };
+		CCC115B72CD008A60099D384 /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115B62CD008A60099D384 /* DashboardRouter.swift */; };
+		CCC115B92CD008AD0099D384 /* DashboardAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115B82CD008AD0099D384 /* DashboardAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +94,22 @@
 		CCC1158C2CCB96340099D384 /* OnboardingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAssembly.swift; sourceTree = "<group>"; };
 		CCC1158E2CCB963D0099D384 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
 		CCC115902CCB96440099D384 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
+		CCC115932CCFCF980099D384 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		CCC1159C2CD008400099D384 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		CCC1159E2CD008470099D384 /* PlayersAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersAssembly.swift; sourceTree = "<group>"; };
+		CCC115A02CD0084D0099D384 /* PlayersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersRouter.swift; sourceTree = "<group>"; };
+		CCC115A22CD008560099D384 /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
+		CCC115A42CD0085E0099D384 /* StatisticRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticRouter.swift; sourceTree = "<group>"; };
+		CCC115A62CD008660099D384 /* StatisticAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticAssembly.swift; sourceTree = "<group>"; };
+		CCC115A82CD0086F0099D384 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		CCC115AA2CD008750099D384 /* EventRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRouter.swift; sourceTree = "<group>"; };
+		CCC115AC2CD0087B0099D384 /* EventAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAssembly.swift; sourceTree = "<group>"; };
+		CCC115AE2CD008860099D384 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
+		CCC115B02CD0088D0099D384 /* MatchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchRouter.swift; sourceTree = "<group>"; };
+		CCC115B22CD008940099D384 /* MatchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchAssembly.swift; sourceTree = "<group>"; };
+		CCC115B42CD0089E0099D384 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		CCC115B62CD008A60099D384 /* DashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouter.swift; sourceTree = "<group>"; };
+		CCC115B82CD008AD0099D384 /* DashboardAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +195,12 @@
 		CCC115572CCB900C0099D384 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CCC1159B2CD008360099D384 /* Players */,
+				CCC1159A2CD0082E0099D384 /* Statistic */,
+				CCC115992CD0082A0099D384 /* Event */,
+				CCC115982CD008260099D384 /* Match */,
+				CCC115952CD008130099D384 /* Dashboard */,
+				CCC115922CCFCF8D0099D384 /* TabBar */,
 				CCC115882CCB96190099D384 /* Onboarding */,
 				CCC115682CCB915C0099D384 /* UntilOnboarding */,
 			);
@@ -246,6 +284,64 @@
 				CCC115902CCB96440099D384 /* OnboardingCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		CCC115922CCFCF8D0099D384 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CCC115932CCFCF980099D384 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		CCC115952CD008130099D384 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				CCC115B42CD0089E0099D384 /* DashboardViewController.swift */,
+				CCC115B62CD008A60099D384 /* DashboardRouter.swift */,
+				CCC115B82CD008AD0099D384 /* DashboardAssembly.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		CCC115982CD008260099D384 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				CCC115AE2CD008860099D384 /* MatchViewController.swift */,
+				CCC115B02CD0088D0099D384 /* MatchRouter.swift */,
+				CCC115B22CD008940099D384 /* MatchAssembly.swift */,
+			);
+			path = Match;
+			sourceTree = "<group>";
+		};
+		CCC115992CD0082A0099D384 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				CCC115A82CD0086F0099D384 /* EventViewController.swift */,
+				CCC115AA2CD008750099D384 /* EventRouter.swift */,
+				CCC115AC2CD0087B0099D384 /* EventAssembly.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		CCC1159A2CD0082E0099D384 /* Statistic */ = {
+			isa = PBXGroup;
+			children = (
+				CCC115A22CD008560099D384 /* StatisticViewController.swift */,
+				CCC115A42CD0085E0099D384 /* StatisticRouter.swift */,
+				CCC115A62CD008660099D384 /* StatisticAssembly.swift */,
+			);
+			path = Statistic;
+			sourceTree = "<group>";
+		};
+		CCC1159B2CD008360099D384 /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				CCC1159C2CD008400099D384 /* PlayersViewController.swift */,
+				CCC115A02CD0084D0099D384 /* PlayersRouter.swift */,
+				CCC1159E2CD008470099D384 /* PlayersAssembly.swift */,
+			);
+			path = Players;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,25 +433,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCC115B92CD008AD0099D384 /* DashboardAssembly.swift in Sources */,
 				CCC115292CCB8DF30099D384 /* AppDelegate.swift in Sources */,
 				CCC1157F2CCB924A0099D384 /* UIColor.swift in Sources */,
 				CCC1157B2CCB923B0099D384 /* TableView.swift in Sources */,
 				CCC1156C2CCB91740099D384 /* UntilOnboardingAssembly.swift in Sources */,
 				CCC1158B2CCB962A0099D384 /* OnboardingViewController.swift in Sources */,
+				CCC115A92CD0086F0099D384 /* EventViewController.swift in Sources */,
+				CCC115A12CD0084D0099D384 /* PlayersRouter.swift in Sources */,
+				CCC115A32CD008560099D384 /* StatisticViewController.swift in Sources */,
+				CCC115B72CD008A60099D384 /* DashboardRouter.swift in Sources */,
+				CCC1159D2CD008400099D384 /* PlayersViewController.swift in Sources */,
 				CCC115672CCB90660099D384 /* ServiceAssembly.swift in Sources */,
+				CCC115B32CD008940099D384 /* MatchAssembly.swift in Sources */,
 				CCC1158D2CCB96340099D384 /* OnboardingAssembly.swift in Sources */,
 				CCC115652CCB905B0099D384 /* ViewControllerFactory.swift in Sources */,
 				CCC115832CCB92570099D384 /* UILabel.swift in Sources */,
 				CCC1157D2CCB92420099D384 /* CollectionView.swift in Sources */,
+				CCC115A52CD0085E0099D384 /* StatisticRouter.swift in Sources */,
 				CCC115912CCB96440099D384 /* OnboardingCell.swift in Sources */,
+				CCC115AD2CD0087B0099D384 /* EventAssembly.swift in Sources */,
 				CCC1158F2CCB963D0099D384 /* OnboardingRouter.swift in Sources */,
+				CCC115B52CD0089E0099D384 /* DashboardViewController.swift in Sources */,
+				CCC115AF2CD008860099D384 /* MatchViewController.swift in Sources */,
 				CCC115622CCB90470099D384 /* BaseRouter.swift in Sources */,
+				CCC115B12CD0088D0099D384 /* MatchRouter.swift in Sources */,
 				CCC1156E2CCB917D0099D384 /* UntilOnboardingRouter.swift in Sources */,
 				CCC115602CCB90400099D384 /* ReusableView.swift in Sources */,
+				CCC115942CCFCF980099D384 /* TabBarViewController.swift in Sources */,
 				CCC115812CCB92510099D384 /* UIDevice.swift in Sources */,
+				CCC115A72CD008660099D384 /* StatisticAssembly.swift in Sources */,
+				CCC115AB2CD008750099D384 /* EventRouter.swift in Sources */,
 				CCC115872CCB92630099D384 /* String.swift in Sources */,
 				CCC1155E2CCB90390099D384 /* BaseViewController.swift in Sources */,
 				CCC115852CCB925D0099D384 /* StackView.swift in Sources */,
+				CCC1159F2CD008470099D384 /* PlayersAssembly.swift in Sources */,
 				CCC1152B2CCB8DF30099D384 /* SceneDelegate.swift in Sources */,
 				CCC1156A2CCB916C0099D384 /* UntilOnboardingViewController.swift in Sources */,
 				CCC1155C2CCB902F0099D384 /* Setupable.swift in Sources */,
