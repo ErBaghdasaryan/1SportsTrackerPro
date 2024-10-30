@@ -11,7 +11,10 @@ import SnapKit
 
 class TabBarViewController: UITabBarController {
 
+    var viewModel: ViewModel?
+
     private let createButton = UIButton(type: .system)
+    private let createdButton = TeamView()
     private let addTeamButton = UIButton(type: .system)
     private let settingsButton = UIButton(type: .system)
     private let rulesButton = UIButton(type: .system)
@@ -20,8 +23,27 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
         setupViewControllers()
         setupUI()
+        makeButtonActions()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = false
+        self.navigationItem.hidesBackButton = true
+        navigationController?.navigationBar.isHidden = true
+
+        let name: String? = self.viewModel?.appStorageService.getData(key: .teamName)
+        let imageData: Data? = self.viewModel?.appStorageService.getData(key: .teamImage)
+
+        if let name = name, let imageData = imageData, let image = UIImage(data: imageData) {
+            self.addSubviewTeam()
+            self.createdButton.setup(with: image, name: name)
+        } else if let name = name {
+            self.createdButton.setup(with: UIImage(named: "dashboard")!, name: name)
+        }
+    }
+
+    //MARK: Setup View Controllers
     private func setupViewControllers() {
         lazy var dashboardViewController = self.createNavigation(title: "Dashboard",
                                                                  image: "dashboard",
@@ -57,55 +79,6 @@ class TabBarViewController: UITabBarController {
         self.selectedIndex = 0
     }
 
-    private func setupUI() {
-        settingsButton.setImage(UIImage(named: "settingsButton"), for: .normal)
-        rulesButton.setImage(UIImage(named: "rulesButton"), for: .normal)
-        addTeamButton.setImage(UIImage(named: "addButton"), for: .normal)
-
-        createButton.backgroundColor = .white
-        createButton.setTitle("Create team", for: .normal)
-        createButton.setTitleColor(.black, for: .normal)
-        createButton.layer.cornerRadius = 18
-        createButton.titleLabel?.font = UIFont(name: "SFProText-Semibold", size: 17)
-
-        self.view.addSubview(settingsButton)
-        self.view.addSubview(rulesButton)
-        self.view.addSubview(createButton)
-        self.view.addSubview(addTeamButton)
-        setupConstraints()
-    }
-
-    private func setupConstraints() {
-
-        createButton.snp.makeConstraints { view in
-            view.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(16)
-            view.leading.equalToSuperview().offset(16)
-            view.trailing.equalToSuperview().inset(243)
-            view.height.equalTo(48)
-        }
-
-        addTeamButton.snp.makeConstraints { view in
-            view.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(16)
-            view.leading.equalTo(createButton.snp.trailing).offset(8)
-            view.width.equalTo(48)
-            view.height.equalTo(48)
-        }
-
-        settingsButton.snp.makeConstraints { view in
-            view.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(16)
-            view.trailing.equalToSuperview().inset(16)
-            view.height.equalTo(48)
-            view.width.equalTo(48)
-        }
-
-        rulesButton.snp.makeConstraints { view in
-            view.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(16)
-            view.trailing.equalToSuperview().inset(72)
-            view.height.equalTo(48)
-            view.width.equalTo(48)
-        }
-    }
-
     private func createNavigation(title: String, image: String, vc: UIViewController) -> UINavigationController {
         let navigation = UINavigationController(rootViewController: vc)
         self.tabBar.backgroundColor = UIColor.white.withAlphaComponent(0.05)
@@ -138,11 +111,122 @@ class TabBarViewController: UITabBarController {
         return navigation
     }
 
+    //MARK: Setup UI elements
+    private func setupUI() {
+        settingsButton.setImage(UIImage(named: "settingsButton"), for: .normal)
+        rulesButton.setImage(UIImage(named: "rulesButton"), for: .normal)
+        addTeamButton.setImage(UIImage(named: "addButton"), for: .normal)
+
+        createButton.backgroundColor = .white
+        createButton.setTitle("Create team", for: .normal)
+        createButton.setTitleColor(.black, for: .normal)
+        createButton.layer.cornerRadius = 18
+        createButton.titleLabel?.font = UIFont(name: "SFProText-Semibold", size: 17)
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleNotification(_:)),
+            name: Notification.Name("TeamInfo"),
+            object: nil
+        )
+
+        self.view.addSubview(settingsButton)
+        self.view.addSubview(rulesButton)
+        self.view.addSubview(createButton)
+        self.view.addSubview(addTeamButton)
+        setupConstraints()
+    }
+
+    private func addSubviewTeam() {
+        self.view.addSubview(createdButton)
+
+        createdButton.snp.makeConstraints { view in
+            view.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(16)
+            view.leading.equalToSuperview().offset(16)
+            view.width.equalTo(156)
+            view.height.equalTo(48)
+        }
+    }
+
+    private func setupConstraints() {
+
+        createButton.snp.makeConstraints { view in
+            view.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(16)
+            view.leading.equalToSuperview().offset(16)
+            view.width.equalTo(156)
+            view.height.equalTo(48)
+        }
+
+        addTeamButton.snp.makeConstraints { view in
+            view.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(16)
+            view.leading.equalTo(createButton.snp.trailing).offset(8)
+            view.width.equalTo(48)
+            view.height.equalTo(48)
+        }
+
+        settingsButton.snp.makeConstraints { view in
+            view.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(16)
+            view.trailing.equalToSuperview().inset(16)
+            view.height.equalTo(48)
+            view.width.equalTo(48)
+        }
+
+        rulesButton.snp.makeConstraints { view in
+            view.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(16)
+            view.trailing.equalToSuperview().inset(72)
+            view.height.equalTo(48)
+            view.width.equalTo(48)
+        }
+    }
+
     // MARK: - Deinit
     deinit {
         #if DEBUG
         print("deinit \(String(describing: self))")
+        NotificationCenter.default.removeObserver(self)
         #endif
+    }
+}
+
+extension TabBarViewController: IViewModelableController {
+    typealias ViewModel = ITabBarViewModel
+}
+
+//MARK: Button actions
+extension TabBarViewController {
+    private func makeButtonActions() {
+        self.settingsButton.addTarget(self, action: #selector(settingsTapped), for: .touchUpInside)
+        self.addTeamButton.addTarget(self, action: #selector(addTeam), for: .touchUpInside)
+        self.createButton.addTarget(self, action: #selector(editTeam), for: .touchUpInside)
+        self.createdButton.addTarget(self, action: #selector(editTeam), for: .touchUpInside)
+    }
+
+    @objc private func handleNotification(_ notification: Notification) {
+        if let userInfo = notification.userInfo,
+           let text = userInfo["text"] as? String,
+           let image = userInfo["image"] as? UIImage {
+            self.addSubviewTeam()
+            self.createdButton.setup(with: image, name: text)
+            if let imageData = image.pngData() {
+                self.viewModel?.appStorageService.saveData(key: .teamImage, value: imageData)
+            }
+            self.viewModel?.appStorageService.saveData(key: .teamName, value: text)
+        }
+    }
+
+    @objc func editTeam() {
+        guard let navigationController = self.navigationController else { return }
+        TabBarRouter.showChooseTeamViewController(in: navigationController)
+    }
+
+    @objc func addTeam() {
+        guard let navigationController = self.navigationController else { return }
+        TabBarRouter.showTeamViewController(in: navigationController)
+    }
+
+    @objc func settingsTapped() {
+        guard let navigationController = self.navigationController else { return }
+        TabBarRouter.showSettingsViewController(in: navigationController)
     }
 }
 

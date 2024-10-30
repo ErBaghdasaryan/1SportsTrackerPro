@@ -43,4 +43,6 @@ public enum StorageKeys: String {
     case webUrl = "webUrl"
     case skipOnboarding = "skipOnboarding"
     case isAlreadyOpened = "isAlreadyOpened"
+    case teamName = "teamName"
+    case teamImage = "teamImage"
 }

@@ -31,7 +31,46 @@ final class ViewControllerFactory {
 
     //MARK: - TabBar
     static func makeTabBarViewController() -> TabBarViewController {
+        let assembler = Assembler(commonAssemblies + [TabBarAssembly()])
         let viewController = TabBarViewController()
+        viewController.viewModel = assembler.resolver.resolve(ITabBarViewModel.self)
+        return viewController
+    }
+
+    //MARK: Settings
+    static func makeSettingsViewController() -> SettingsViewController {
+        let assembler = Assembler(commonAssemblies + [SettingsAssembly()])
+        let viewController = SettingsViewController()
+        viewController.viewModel = assembler.resolver.resolve(ISettingsViewModel.self)
+        return viewController
+    }
+
+    //MARK: Teams
+    static func makeTeamsViewController() -> TeamViewController {
+        let assembler = Assembler(commonAssemblies + [TeamAssembly()])
+        let viewController = TeamViewController()
+        viewController.viewModel = assembler.resolver.resolve(ITeamViewModel.self)
+        return viewController
+    }
+
+    static func makeChooseTeamsViewController() -> ChooseTeamViewController {
+        let assembler = Assembler(commonAssemblies + [ChooseTeamAssembly()])
+        let viewController = ChooseTeamViewController()
+        viewController.viewModel = assembler.resolver.resolve(ITeamViewModel.self)
+        return viewController
+    }
+
+    static func makeAddTeamViewController(navigationModel: AddNavigationModel) -> AddTeamViewController {
+        let assembler = Assembler(commonAssemblies + [AddTeamAssembly()])
+        let viewController = AddTeamViewController()
+        viewController.viewModel = assembler.resolver.resolve(IAddTeamViewModel.self, argument: navigationModel)
+        return viewController
+    }
+
+    static func makeEditTeamViewController(navigationModel: TeamNavigationModel) -> EditTeamViewController {
+        let assembler = Assembler(commonAssemblies + [EditTeamAssembly()])
+        let viewController = EditTeamViewController()
+        viewController.viewModel = assembler.resolver.resolve(IEditTeamViewModel.self, argument: navigationModel)
         return viewController
     }
 
