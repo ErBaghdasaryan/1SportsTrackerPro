@@ -29,6 +29,8 @@
 		CC72B25B2CD225F400492AC9 /* ChooseTeamAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72B25A2CD225F400492AC9 /* ChooseTeamAssembly.swift */; };
 		CC72B25E2CD237B900492AC9 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72B25D2CD237B900492AC9 /* TeamView.swift */; };
 		CC72B2602CD23D4A00492AC9 /* TabBarAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72B25F2CD23D4A00492AC9 /* TabBarAssembly.swift */; };
+		CC72B27B2CD29C5D00492AC9 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72B27A2CD29C5D00492AC9 /* MatchTableViewCell.swift */; };
+		CC72B27D2CD2ACFC00492AC9 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72B27C2CD2ACFC00492AC9 /* EmptyTableViewCell.swift */; };
 		CCC115292CCB8DF30099D384 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115282CCB8DF30099D384 /* AppDelegate.swift */; };
 		CCC1152B2CCB8DF30099D384 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC1152A2CCB8DF30099D384 /* SceneDelegate.swift */; };
 		CCC115322CCB8DF50099D384 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCC115312CCB8DF50099D384 /* Assets.xcassets */; };
@@ -105,6 +107,8 @@
 		CC72B25A2CD225F400492AC9 /* ChooseTeamAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTeamAssembly.swift; sourceTree = "<group>"; };
 		CC72B25D2CD237B900492AC9 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 		CC72B25F2CD23D4A00492AC9 /* TabBarAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAssembly.swift; sourceTree = "<group>"; };
+		CC72B27A2CD29C5D00492AC9 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
+		CC72B27C2CD2ACFC00492AC9 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
 		CCC115252CCB8DF30099D384 /* 1SportsTrackerPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1SportsTrackerPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCC115282CCB8DF30099D384 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCC1152A2CCB8DF30099D384 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -278,6 +282,15 @@
 				CC72B25D2CD237B900492AC9 /* TeamView.swift */,
 			);
 			path = TeamView;
+			sourceTree = "<group>";
+		};
+		CC72B2792CD29C5200492AC9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CC72B27A2CD29C5D00492AC9 /* MatchTableViewCell.swift */,
+				CC72B27C2CD2ACFC00492AC9 /* EmptyTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		CCC1151C2CCB8DF30099D384 = {
@@ -469,6 +482,7 @@
 		CCC115982CD008260099D384 /* Match */ = {
 			isa = PBXGroup;
 			children = (
+				CC72B2792CD29C5200492AC9 /* Cell */,
 				CCC115AE2CD008860099D384 /* MatchViewController.swift */,
 				CCC115B02CD0088D0099D384 /* MatchRouter.swift */,
 				CCC115B22CD008940099D384 /* MatchAssembly.swift */,
@@ -611,6 +625,7 @@
 				CCC115A32CD008560099D384 /* StatisticViewController.swift in Sources */,
 				CCC115B72CD008A60099D384 /* DashboardRouter.swift in Sources */,
 				CC72B2442CD2107100492AC9 /* TeamCollectionViewCell.swift in Sources */,
+				CC72B27D2CD2ACFC00492AC9 /* EmptyTableViewCell.swift in Sources */,
 				CCC1159D2CD008400099D384 /* PlayersViewController.swift in Sources */,
 				CC72B24B2CD21ABD00492AC9 /* TeamRouter.swift in Sources */,
 				CC72B2472CD2196E00492AC9 /* AddTeamViewController.swift in Sources */,
@@ -653,6 +668,7 @@
 				CCC1152B2CCB8DF30099D384 /* SceneDelegate.swift in Sources */,
 				CCC1156A2CCB916C0099D384 /* UntilOnboardingViewController.swift in Sources */,
 				CC72B2302CD0C70300492AC9 /* SettingsAssembly.swift in Sources */,
+				CC72B27B2CD29C5D00492AC9 /* MatchTableViewCell.swift in Sources */,
 				CC72B2422CD20EF100492AC9 /* EmptyCollectionViewCell.swift in Sources */,
 				CCC1155C2CCB902F0099D384 /* Setupable.swift in Sources */,
 			);
