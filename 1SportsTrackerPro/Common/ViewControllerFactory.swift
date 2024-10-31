@@ -45,6 +45,12 @@ final class ViewControllerFactory {
         return viewController
     }
 
+    static func makeUsageViewController() -> UsageViewController {
+        let viewController = UsageViewController()
+        return viewController
+    }
+
+
     //MARK: Teams
     static func makeTeamsViewController() -> TeamViewController {
         let assembler = Assembler(commonAssemblies + [TeamAssembly()])
@@ -56,6 +62,13 @@ final class ViewControllerFactory {
     static func makeChooseTeamsViewController() -> ChooseTeamViewController {
         let assembler = Assembler(commonAssemblies + [ChooseTeamAssembly()])
         let viewController = ChooseTeamViewController()
+        viewController.viewModel = assembler.resolver.resolve(ITeamViewModel.self)
+        return viewController
+    }
+
+    static func makeSelectTeamsViewController() -> SelectTeamViewController {
+        let assembler = Assembler(commonAssemblies + [SelectTeamAssembly()])
+        let viewController = SelectTeamViewController()
         viewController.viewModel = assembler.resolver.resolve(ITeamViewModel.self)
         return viewController
     }
@@ -90,11 +103,39 @@ final class ViewControllerFactory {
         return viewController
     }
 
+    static func makeAddMatchViewController(navigationModel: AddNavigationModel) -> AddMatchViewController {
+        let assembler = Assembler(commonAssemblies + [AddMatchAssembly()])
+        let viewController = AddMatchViewController()
+        viewController.viewModel = assembler.resolver.resolve(IAddMatchViewModel.self, argument: navigationModel)
+        return viewController
+    }
+
+    static func makeEditMatchViewController(navigationModel: MatchNavigatioModel) -> EditMatchViewController {
+        let assembler = Assembler(commonAssemblies + [EditMatchAssembly()])
+        let viewController = EditMatchViewController()
+        viewController.viewModel = assembler.resolver.resolve(IEditMatchViewModel.self, argument: navigationModel)
+        return viewController
+    }
+
     //MARK: Event
     static func makeEventViewController() -> EventViewController {
         let assembler = Assembler(commonAssemblies + [EventAssembly()])
         let viewController = EventViewController()
         viewController.viewModel = assembler.resolver.resolve(IEventViewModel.self)
+        return viewController
+    }
+
+    static func makeAddEventViewController(navigationModel: AddNavigationModel) -> AddEventViewController {
+        let assembler = Assembler(commonAssemblies + [AddEventAssembly()])
+        let viewController = AddEventViewController()
+        viewController.viewModel = assembler.resolver.resolve(IAddEventViewModel.self, argument: navigationModel)
+        return viewController
+    }
+
+    static func makeEditEventViewController(navigationModel: EventNavigationModel) -> EditEventViewController {
+        let assembler = Assembler(commonAssemblies + [EditEventAssembly()])
+        let viewController = EditEventViewController()
+        viewController.viewModel = assembler.resolver.resolve(IEditEventViewModel.self, argument: navigationModel)
         return viewController
     }
 
@@ -111,6 +152,20 @@ final class ViewControllerFactory {
         let assembler = Assembler(commonAssemblies + [PlayersAssembly()])
         let viewController = PlayersViewController()
         viewController.viewModel = assembler.resolver.resolve(IPlayersViewModel.self)
+        return viewController
+    }
+
+    static func makeAddPlayerViewController(navigationModel: AddNavigationModel) -> AddPlayerViewController {
+        let assembler = Assembler(commonAssemblies + [AddPlayerAssembly()])
+        let viewController = AddPlayerViewController()
+        viewController.viewModel = assembler.resolver.resolve(IAddPlayerViewModel.self, argument: navigationModel)
+        return viewController
+    }
+
+    static func makeEditPlayerViewController(navigationModel: PlayerNavigationModel) -> EditPlayerViewController {
+        let assembler = Assembler(commonAssemblies + [EditPlayerAssembly()])
+        let viewController = EditPlayerViewController()
+        viewController.viewModel = assembler.resolver.resolve(IEditPlayerViewModel.self, argument: navigationModel)
         return viewController
     }
 }

@@ -46,6 +46,13 @@ class StatisticViewController: BaseViewController, UICollectionViewDelegate {
                                       axis: .horizontal,
                                       spacing: 8)
 
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleNotification(_:)),
+            name: Notification.Name("SendStatistic"),
+            object: nil
+        )
+
         self.view.addSubview(pageTitle)
         self.view.addSubview(firstStack)
         self.view.addSubview(secondStack)
@@ -106,6 +113,28 @@ extension StatisticViewController: IViewModelableController {
 extension StatisticViewController {
     private func makeButtonActions() {
         
+    }
+
+    @objc private func handleNotification(_ notification: Notification) {
+        if let userInfo = notification.userInfo,
+           let victoriesString = userInfo["string1"] as? String,
+           let defeatString = userInfo["string2"] as? String,
+           let goalScore = userInfo["string3"] as? String,
+           let bpNumber = userInfo["string4"] as? String,
+           let bpName = userInfo["string5"] as? String,
+           let victories = Int(victoriesString),
+           let defeats = Int(defeatString) {
+            
+            self.victories.setup(with: victoriesString)
+            self.defeat.setup(with: defeatString)
+            self.scores.setup(with: goalScore)
+            self.bestPlayer.setup(with: bpNumber, and: bpName)
+            
+            let totalGames = victories + defeats
+            let winPercentage: Float = totalGames > 0 ? (Float(victories) / Float(totalGames)) * 100 : 0
+
+            self.winsPersintage.setup(with: "\(winPercentage)")
+        }
     }
 }
 

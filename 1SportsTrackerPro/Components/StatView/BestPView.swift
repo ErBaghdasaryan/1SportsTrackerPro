@@ -56,15 +56,15 @@ final class BestPView: UIView {
 
         count.snp.makeConstraints { view in
             view.top.equalTo(title.snp.bottom).offset(8)
-            view.leading.equalToSuperview().offset(132)
-            view.trailing.equalToSuperview().inset(195)
+            view.leading.equalToSuperview().offset(113)
+            view.width.equalTo(39)
             view.height.equalTo(36)
         }
 
         name.snp.makeConstraints { view in
             view.top.equalTo(title.snp.bottom).offset(12)
             view.leading.equalTo(count.snp.trailing).offset(8)
-            view.trailing.equalToSuperview().inset(125)
+            view.trailing.equalToSuperview().inset(16)
             view.height.equalTo(28)
         }
     }

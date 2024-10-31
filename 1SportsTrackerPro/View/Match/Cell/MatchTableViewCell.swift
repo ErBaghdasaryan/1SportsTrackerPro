@@ -49,7 +49,7 @@ final class MatchTableViewCell: UITableViewCell, IReusableView {
 
         self.backgroundColor = .clear
         self.selectionStyle = .none
-        self.content.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        self.content.backgroundColor = UIColor.white.withAlphaComponent(0.05)
         self.content.layer.cornerRadius = 10
 
         if isWin {
@@ -110,7 +110,7 @@ final class MatchTableViewCell: UITableViewCell, IReusableView {
 
         firstName.snp.makeConstraints { view in
             view.top.equalTo(firstImage.snp.bottom).offset(8)
-            view.trailing.equalToSuperview().inset(16)
+            view.leading.equalToSuperview().offset(16)
             view.width.equalTo(100)
             view.height.equalTo(22)
         }
@@ -164,6 +164,8 @@ final class MatchTableViewCell: UITableViewCell, IReusableView {
         self.date.text = model.date
         self.score.text = "\(model.firstScore) : \(model.secondScore)"
         self.city.text = model.city
+        self.secondImage.image = model.secondImage
+        self.secondName.text = model.secondName
 
         self.setupUI(isWin: model.isVictory)
     }

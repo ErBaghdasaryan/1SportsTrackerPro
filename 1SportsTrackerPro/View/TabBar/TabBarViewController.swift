@@ -17,7 +17,6 @@ class TabBarViewController: UITabBarController {
     private let createdButton = TeamView()
     private let addTeamButton = UIButton(type: .system)
     private let settingsButton = UIButton(type: .system)
-    private let rulesButton = UIButton(type: .system)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +67,13 @@ class TabBarViewController: UITabBarController {
         self.setViewControllers([dashboardViewController, matchViewController, eventViewController, statisticViewController, playersViewController], animated: true)
         NotificationCenter.default.addObserver(self, selector: #selector(setCurrentPageToTeam), name: Notification.Name("ResetCompleted"), object: nil)
 
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(setStatisticPage),
+            name: Notification.Name("AllStatistic"),
+            object: nil
+        )
+
         dashboardViewController.delegate = self
         matchViewController.delegate = self
         eventViewController.delegate = self
@@ -79,9 +85,15 @@ class TabBarViewController: UITabBarController {
         self.selectedIndex = 0
     }
 
+    @objc func setStatisticPage() {
+        self.selectedIndex = 3
+    }
+
     private func createNavigation(title: String, image: String, vc: UIViewController) -> UINavigationController {
         let navigation = UINavigationController(rootViewController: vc)
-        self.tabBar.backgroundColor = UIColor.white.withAlphaComponent(0.05)
+        self.tabBar.backgroundColor = UIColor(hex: "#001724")?.withAlphaComponent(0.5)
+        self.tabBar.barTintColor = UIColor(hex: "#001724")?.withAlphaComponent(0.5)
+        self.tabBar.isTranslucent = false
 
         let unselectedImage = UIImage(named: image)?.withRenderingMode(.alwaysTemplate)
         let selectedImage = UIImage(named: image)?.withTintColor(.white, renderingMode: .alwaysTemplate)
@@ -114,7 +126,6 @@ class TabBarViewController: UITabBarController {
     //MARK: Setup UI elements
     private func setupUI() {
         settingsButton.setImage(UIImage(named: "settingsButton"), for: .normal)
-        rulesButton.setImage(UIImage(named: "rulesButton"), for: .normal)
         addTeamButton.setImage(UIImage(named: "addButton"), for: .normal)
 
         createButton.backgroundColor = .white
@@ -131,7 +142,6 @@ class TabBarViewController: UITabBarController {
         )
 
         self.view.addSubview(settingsButton)
-        self.view.addSubview(rulesButton)
         self.view.addSubview(createButton)
         self.view.addSubview(addTeamButton)
         setupConstraints()
@@ -167,13 +177,6 @@ class TabBarViewController: UITabBarController {
         settingsButton.snp.makeConstraints { view in
             view.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(16)
             view.trailing.equalToSuperview().inset(16)
-            view.height.equalTo(48)
-            view.width.equalTo(48)
-        }
-
-        rulesButton.snp.makeConstraints { view in
-            view.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(16)
-            view.trailing.equalToSuperview().inset(72)
             view.height.equalTo(48)
             view.width.equalTo(48)
         }

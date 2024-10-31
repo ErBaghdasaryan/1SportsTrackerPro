@@ -75,6 +75,8 @@ class PlayersViewController: BaseViewController, UICollectionViewDelegate {
             view.trailing.equalToSuperview().inset(16)
             view.bottom.equalToSuperview()
         }
+
+        tableView.contentInset = UIEdgeInsets(top: -25, left: 0, bottom: 0, right: 0    )
     }
 
     private func setupTableView() {
@@ -83,7 +85,7 @@ class PlayersViewController: BaseViewController, UICollectionViewDelegate {
         self.tableView.showsVerticalScrollIndicator = false
 
         self.tableView.register(EmptyTableViewCell.self)
-        self.tableView.register(MatchTableViewCell.self)
+        self.tableView.register(PlayerTableViewCell.self)
     }
 }
 
@@ -95,7 +97,23 @@ extension PlayersViewController: IViewModelableController {
 //MARK: Progress View
 extension PlayersViewController {
     private func makeButtonActions() {
-        
+        add.addTarget(self, action: #selector(addPlayer), for: .touchUpInside)
+    }
+
+    @objc func addPlayer() {
+        guard let navigationController = self.navigationController else { return }
+        guard let subject = self.viewModel?.activateSuccessSubject else { return }
+
+        PlayersRouter.showAddPlayerViewController(in: navigationController, navigationModel: .init(activateSuccessSubject: subject))
+    }
+
+    private func editPlayer(for index: Int) {
+        guard let navigationController = self.navigationController else { return }
+        guard let subject = self.viewModel?.activateSuccessSubject else { return }
+
+        let model = self.viewModel?.players[index]
+
+        PlayersRouter.showEditPlayerViewController(in: navigationController, navigationModel: .init(activateSuccessSubject: subject, model: model!))
     }
 }
 
@@ -113,11 +131,10 @@ extension PlayersViewController:  UITableViewDelegate, UITableViewDataSource {
             cell.setup(with: "You don't have any team members yet", and: UIImage(named: "players")!)
             return cell
         } else {
-            let cell: MatchTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-//            if let model = viewModel?.events[indexPath.row] {
-//                cell.setup(model: model)
-//            }
-
+            let cell: PlayerTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            if let model = viewModel?.players[indexPath.row] {
+                cell.setup(model: model)
+            }
             return cell
         }
     }
@@ -131,7 +148,7 @@ extension PlayersViewController:  UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.editBet(for: indexPath.row)
+        self.editPlayer(for: indexPath.row)
     }
 }
 

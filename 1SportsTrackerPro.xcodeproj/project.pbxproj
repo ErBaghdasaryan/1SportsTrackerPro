@@ -7,6 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC5985832CD3907400649C03 /* AddMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985822CD3907400649C03 /* AddMatchViewController.swift */; };
+		CC5985852CD3907D00649C03 /* AddMatchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985842CD3907D00649C03 /* AddMatchAssembly.swift */; };
+		CC5985882CD3A08000649C03 /* MatchPresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985872CD3A08000649C03 /* MatchPresentView.swift */; };
+		CC59858A2CD3A0C100649C03 /* CreateMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985892CD3A0C100649C03 /* CreateMatchView.swift */; };
+		CC59858C2CD3B04E00649C03 /* CreateStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59858B2CD3B04E00649C03 /* CreateStatView.swift */; };
+		CC59858F2CD3B22A00649C03 /* CreateBestPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59858E2CD3B22A00649C03 /* CreateBestPlayerView.swift */; };
+		CC5985912CD3B42A00649C03 /* AddMatchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985902CD3B42A00649C03 /* AddMatchRouter.swift */; };
+		CC5985942CD3B6AA00649C03 /* SelectTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985932CD3B6AA00649C03 /* SelectTeamViewController.swift */; };
+		CC5985962CD3B6B200649C03 /* SelectTeamAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985952CD3B6B200649C03 /* SelectTeamAssembly.swift */; };
+		CC5985992CD3BE1A00649C03 /* EditMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985982CD3BE1A00649C03 /* EditMatchViewController.swift */; };
+		CC59859B2CD3BE2300649C03 /* EditMatchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59859A2CD3BE2300649C03 /* EditMatchAssembly.swift */; };
+		CC59859E2CD3C42D00649C03 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59859D2CD3C42D00649C03 /* EventTableViewCell.swift */; };
+		CC5985A12CD3C5F200649C03 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985A02CD3C5F200649C03 /* AddEventViewController.swift */; };
+		CC5985A32CD3C5F900649C03 /* AddEventAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985A22CD3C5F900649C03 /* AddEventAssembly.swift */; };
+		CC5985A52CD3C80A00649C03 /* EventPlayerStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985A42CD3C80A00649C03 /* EventPlayerStatView.swift */; };
+		CC5985A82CD3CD7300649C03 /* EditEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985A72CD3CD7300649C03 /* EditEventViewController.swift */; };
+		CC5985AA2CD3CD7B00649C03 /* EditEventAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985A92CD3CD7B00649C03 /* EditEventAssembly.swift */; };
+		CC5985AC2CD3CE3B00649C03 /* EventPlayerPresentStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985AB2CD3CE3B00649C03 /* EventPlayerPresentStatView.swift */; };
+		CC5985AF2CD3D1DD00649C03 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985AE2CD3D1DD00649C03 /* PlayerTableViewCell.swift */; };
+		CC5985B22CD3D6B300649C03 /* AddPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985B12CD3D6B300649C03 /* AddPlayerViewController.swift */; };
+		CC5985B42CD3D6BA00649C03 /* AddPlayerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985B32CD3D6BA00649C03 /* AddPlayerAssembly.swift */; };
+		CC5985B72CD3DB4C00649C03 /* EditPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985B62CD3DB4C00649C03 /* EditPlayerViewController.swift */; };
+		CC5985B92CD3DB5300649C03 /* EditPlayerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985B82CD3DB5300649C03 /* EditPlayerAssembly.swift */; };
+		CC5985BC2CD3E4B900649C03 /* UsageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985BB2CD3E4B900649C03 /* UsageViewController.swift */; };
+		CC5985BE2CD3E6A800649C03 /* LastMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985BD2CD3E6A800649C03 /* LastMatchView.swift */; };
+		CC5985C12CD3E6E300649C03 /* LastEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985C02CD3E6E300649C03 /* LastEventView.swift */; };
+		CC5985C42CD3E76000649C03 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5985C32CD3E76000649C03 /* EmptyView.swift */; };
 		CC72B22A2CD0C65500492AC9 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72B2292CD0C65500492AC9 /* TabBarRouter.swift */; };
 		CC72B22E2CD0C6FB00492AC9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72B22D2CD0C6FB00492AC9 /* SettingsViewController.swift */; };
 		CC72B2302CD0C70300492AC9 /* SettingsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72B22F2CD0C70300492AC9 /* SettingsAssembly.swift */; };
@@ -85,6 +112,33 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC5985822CD3907400649C03 /* AddMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMatchViewController.swift; sourceTree = "<group>"; };
+		CC5985842CD3907D00649C03 /* AddMatchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMatchAssembly.swift; sourceTree = "<group>"; };
+		CC5985872CD3A08000649C03 /* MatchPresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPresentView.swift; sourceTree = "<group>"; };
+		CC5985892CD3A0C100649C03 /* CreateMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMatchView.swift; sourceTree = "<group>"; };
+		CC59858B2CD3B04E00649C03 /* CreateStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStatView.swift; sourceTree = "<group>"; };
+		CC59858E2CD3B22A00649C03 /* CreateBestPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBestPlayerView.swift; sourceTree = "<group>"; };
+		CC5985902CD3B42A00649C03 /* AddMatchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMatchRouter.swift; sourceTree = "<group>"; };
+		CC5985932CD3B6AA00649C03 /* SelectTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTeamViewController.swift; sourceTree = "<group>"; };
+		CC5985952CD3B6B200649C03 /* SelectTeamAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTeamAssembly.swift; sourceTree = "<group>"; };
+		CC5985982CD3BE1A00649C03 /* EditMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMatchViewController.swift; sourceTree = "<group>"; };
+		CC59859A2CD3BE2300649C03 /* EditMatchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMatchAssembly.swift; sourceTree = "<group>"; };
+		CC59859D2CD3C42D00649C03 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		CC5985A02CD3C5F200649C03 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		CC5985A22CD3C5F900649C03 /* AddEventAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventAssembly.swift; sourceTree = "<group>"; };
+		CC5985A42CD3C80A00649C03 /* EventPlayerStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPlayerStatView.swift; sourceTree = "<group>"; };
+		CC5985A72CD3CD7300649C03 /* EditEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventViewController.swift; sourceTree = "<group>"; };
+		CC5985A92CD3CD7B00649C03 /* EditEventAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventAssembly.swift; sourceTree = "<group>"; };
+		CC5985AB2CD3CE3B00649C03 /* EventPlayerPresentStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPlayerPresentStatView.swift; sourceTree = "<group>"; };
+		CC5985AE2CD3D1DD00649C03 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
+		CC5985B12CD3D6B300649C03 /* AddPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerViewController.swift; sourceTree = "<group>"; };
+		CC5985B32CD3D6BA00649C03 /* AddPlayerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerAssembly.swift; sourceTree = "<group>"; };
+		CC5985B62CD3DB4C00649C03 /* EditPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlayerViewController.swift; sourceTree = "<group>"; };
+		CC5985B82CD3DB5300649C03 /* EditPlayerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlayerAssembly.swift; sourceTree = "<group>"; };
+		CC5985BB2CD3E4B900649C03 /* UsageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageViewController.swift; sourceTree = "<group>"; };
+		CC5985BD2CD3E6A800649C03 /* LastMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastMatchView.swift; sourceTree = "<group>"; };
+		CC5985C02CD3E6E300649C03 /* LastEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastEventView.swift; sourceTree = "<group>"; };
+		CC5985C32CD3E76000649C03 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		CC72B2292CD0C65500492AC9 /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
 		CC72B22D2CD0C6FB00492AC9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CC72B22F2CD0C70300492AC9 /* SettingsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAssembly.swift; sourceTree = "<group>"; };
@@ -177,9 +231,124 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC5985812CD3906800649C03 /* AddMatch */ = {
+			isa = PBXGroup;
+			children = (
+				CC5985822CD3907400649C03 /* AddMatchViewController.swift */,
+				CC5985842CD3907D00649C03 /* AddMatchAssembly.swift */,
+				CC5985902CD3B42A00649C03 /* AddMatchRouter.swift */,
+			);
+			path = AddMatch;
+			sourceTree = "<group>";
+		};
+		CC5985862CD3A07900649C03 /* MatchView */ = {
+			isa = PBXGroup;
+			children = (
+				CC5985872CD3A08000649C03 /* MatchPresentView.swift */,
+				CC5985892CD3A0C100649C03 /* CreateMatchView.swift */,
+				CC5985BD2CD3E6A800649C03 /* LastMatchView.swift */,
+			);
+			path = MatchView;
+			sourceTree = "<group>";
+		};
+		CC5985922CD3B69500649C03 /* SelectTeam */ = {
+			isa = PBXGroup;
+			children = (
+				CC5985932CD3B6AA00649C03 /* SelectTeamViewController.swift */,
+				CC5985952CD3B6B200649C03 /* SelectTeamAssembly.swift */,
+			);
+			path = SelectTeam;
+			sourceTree = "<group>";
+		};
+		CC5985972CD3BE0E00649C03 /* EditMatch */ = {
+			isa = PBXGroup;
+			children = (
+				CC5985982CD3BE1A00649C03 /* EditMatchViewController.swift */,
+				CC59859A2CD3BE2300649C03 /* EditMatchAssembly.swift */,
+			);
+			path = EditMatch;
+			sourceTree = "<group>";
+		};
+		CC59859C2CD3C40700649C03 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CC59859D2CD3C42D00649C03 /* EventTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CC59859F2CD3C5E600649C03 /* AddEvent */ = {
+			isa = PBXGroup;
+			children = (
+				CC5985A02CD3C5F200649C03 /* AddEventViewController.swift */,
+				CC5985A22CD3C5F900649C03 /* AddEventAssembly.swift */,
+			);
+			path = AddEvent;
+			sourceTree = "<group>";
+		};
+		CC5985A62CD3CD6800649C03 /* EditEvent */ = {
+			isa = PBXGroup;
+			children = (
+				CC5985A72CD3CD7300649C03 /* EditEventViewController.swift */,
+				CC5985A92CD3CD7B00649C03 /* EditEventAssembly.swift */,
+			);
+			path = EditEvent;
+			sourceTree = "<group>";
+		};
+		CC5985AD2CD3D1B300649C03 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CC5985AE2CD3D1DD00649C03 /* PlayerTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CC5985B02CD3D6A700649C03 /* AddPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				CC5985B12CD3D6B300649C03 /* AddPlayerViewController.swift */,
+				CC5985B32CD3D6BA00649C03 /* AddPlayerAssembly.swift */,
+			);
+			path = AddPlayer;
+			sourceTree = "<group>";
+		};
+		CC5985B52CD3DB3F00649C03 /* EditPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				CC5985B62CD3DB4C00649C03 /* EditPlayerViewController.swift */,
+				CC5985B82CD3DB5300649C03 /* EditPlayerAssembly.swift */,
+			);
+			path = EditPlayer;
+			sourceTree = "<group>";
+		};
+		CC5985BA2CD3E4AE00649C03 /* Usage */ = {
+			isa = PBXGroup;
+			children = (
+				CC5985BB2CD3E4B900649C03 /* UsageViewController.swift */,
+			);
+			path = Usage;
+			sourceTree = "<group>";
+		};
+		CC5985BF2CD3E6DB00649C03 /* EventView */ = {
+			isa = PBXGroup;
+			children = (
+				CC5985C02CD3E6E300649C03 /* LastEventView.swift */,
+			);
+			path = EventView;
+			sourceTree = "<group>";
+		};
+		CC5985C22CD3E75600649C03 /* EmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				CC5985C32CD3E76000649C03 /* EmptyView.swift */,
+			);
+			path = EmptyView;
+			sourceTree = "<group>";
+		};
 		CC72B22B2CD0C6E600492AC9 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				CC5985BA2CD3E4AE00649C03 /* Usage */,
 				CC72B22D2CD0C6FB00492AC9 /* SettingsViewController.swift */,
 				CC72B22F2CD0C70300492AC9 /* SettingsAssembly.swift */,
 				CC72B2312CD0C70A00492AC9 /* SettingsRouter.swift */,
@@ -207,6 +376,10 @@
 			children = (
 				CC72B2372CD0F91000492AC9 /* StatView.swift */,
 				CC72B2392CD1036B00492AC9 /* BestPView.swift */,
+				CC59858B2CD3B04E00649C03 /* CreateStatView.swift */,
+				CC59858E2CD3B22A00649C03 /* CreateBestPlayerView.swift */,
+				CC5985A42CD3C80A00649C03 /* EventPlayerStatView.swift */,
+				CC5985AB2CD3CE3B00649C03 /* EventPlayerPresentStatView.swift */,
 			);
 			path = StatView;
 			sourceTree = "<group>";
@@ -397,6 +570,9 @@
 		CCC1155A2CCB901D0099D384 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CC5985C22CD3E75600649C03 /* EmptyView */,
+				CC5985BF2CD3E6DB00649C03 /* EventView */,
+				CC5985862CD3A07900649C03 /* MatchView */,
 				CC72B25C2CD237AE00492AC9 /* TeamView */,
 				CC72B24F2CD21D2000492AC9 /* AddPhoto */,
 				CC72B24C2CD21BA200492AC9 /* TextFields */,
@@ -458,6 +634,7 @@
 		CCC115922CCFCF8D0099D384 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				CC5985922CD3B69500649C03 /* SelectTeam */,
 				CC72B2572CD225DF00492AC9 /* ChooseTeam */,
 				CC72B23B2CD207DD00492AC9 /* Team */,
 				CC72B22C2CD0C6EE00492AC9 /* Rules */,
@@ -482,6 +659,8 @@
 		CCC115982CD008260099D384 /* Match */ = {
 			isa = PBXGroup;
 			children = (
+				CC5985972CD3BE0E00649C03 /* EditMatch */,
+				CC5985812CD3906800649C03 /* AddMatch */,
 				CC72B2792CD29C5200492AC9 /* Cell */,
 				CCC115AE2CD008860099D384 /* MatchViewController.swift */,
 				CCC115B02CD0088D0099D384 /* MatchRouter.swift */,
@@ -493,6 +672,9 @@
 		CCC115992CD0082A0099D384 /* Event */ = {
 			isa = PBXGroup;
 			children = (
+				CC5985A62CD3CD6800649C03 /* EditEvent */,
+				CC59859F2CD3C5E600649C03 /* AddEvent */,
+				CC59859C2CD3C40700649C03 /* Cell */,
 				CCC115A82CD0086F0099D384 /* EventViewController.swift */,
 				CCC115AA2CD008750099D384 /* EventRouter.swift */,
 				CCC115AC2CD0087B0099D384 /* EventAssembly.swift */,
@@ -513,6 +695,9 @@
 		CCC1159B2CD008360099D384 /* Players */ = {
 			isa = PBXGroup;
 			children = (
+				CC5985B52CD3DB3F00649C03 /* EditPlayer */,
+				CC5985B02CD3D6A700649C03 /* AddPlayer */,
+				CC5985AD2CD3D1B300649C03 /* Cell */,
 				CCC1159C2CD008400099D384 /* PlayersViewController.swift */,
 				CCC115A02CD0084D0099D384 /* PlayersRouter.swift */,
 				CCC1159E2CD008470099D384 /* PlayersAssembly.swift */,
@@ -609,44 +794,68 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC5985912CD3B42A00649C03 /* AddMatchRouter.swift in Sources */,
+				CC5985A12CD3C5F200649C03 /* AddEventViewController.swift in Sources */,
 				CC72B2382CD0F91000492AC9 /* StatView.swift in Sources */,
+				CC5985C42CD3E76000649C03 /* EmptyView.swift in Sources */,
+				CC5985992CD3BE1A00649C03 /* EditMatchViewController.swift in Sources */,
 				CC72B23D2CD207E800492AC9 /* TeamViewController.swift in Sources */,
 				CCC115B92CD008AD0099D384 /* DashboardAssembly.swift in Sources */,
 				CCC115292CCB8DF30099D384 /* AppDelegate.swift in Sources */,
+				CC59859E2CD3C42D00649C03 /* EventTableViewCell.swift in Sources */,
 				CC72B2592CD225EC00492AC9 /* ChooseTeamViewController.swift in Sources */,
 				CCC1157F2CCB924A0099D384 /* UIColor.swift in Sources */,
 				CC72B2322CD0C70A00492AC9 /* SettingsRouter.swift in Sources */,
+				CC59858F2CD3B22A00649C03 /* CreateBestPlayerView.swift in Sources */,
 				CC72B2562CD223C100492AC9 /* EditTeamAssembly.swift in Sources */,
 				CCC1157B2CCB923B0099D384 /* TableView.swift in Sources */,
 				CCC1156C2CCB91740099D384 /* UntilOnboardingAssembly.swift in Sources */,
+				CC5985B42CD3D6BA00649C03 /* AddPlayerAssembly.swift in Sources */,
+				CC5985AF2CD3D1DD00649C03 /* PlayerTableViewCell.swift in Sources */,
+				CC59859B2CD3BE2300649C03 /* EditMatchAssembly.swift in Sources */,
 				CCC1158B2CCB962A0099D384 /* OnboardingViewController.swift in Sources */,
 				CCC115A92CD0086F0099D384 /* EventViewController.swift in Sources */,
 				CCC115A12CD0084D0099D384 /* PlayersRouter.swift in Sources */,
 				CCC115A32CD008560099D384 /* StatisticViewController.swift in Sources */,
 				CCC115B72CD008A60099D384 /* DashboardRouter.swift in Sources */,
+				CC5985B72CD3DB4C00649C03 /* EditPlayerViewController.swift in Sources */,
 				CC72B2442CD2107100492AC9 /* TeamCollectionViewCell.swift in Sources */,
 				CC72B27D2CD2ACFC00492AC9 /* EmptyTableViewCell.swift in Sources */,
 				CCC1159D2CD008400099D384 /* PlayersViewController.swift in Sources */,
+				CC5985A32CD3C5F900649C03 /* AddEventAssembly.swift in Sources */,
 				CC72B24B2CD21ABD00492AC9 /* TeamRouter.swift in Sources */,
 				CC72B2472CD2196E00492AC9 /* AddTeamViewController.swift in Sources */,
+				CC5985A82CD3CD7300649C03 /* EditEventViewController.swift in Sources */,
 				CC72B2352CD0D5B100492AC9 /* SettingsView.swift in Sources */,
+				CC5985AA2CD3CD7B00649C03 /* EditEventAssembly.swift in Sources */,
 				CCC115672CCB90660099D384 /* ServiceAssembly.swift in Sources */,
 				CCC115B32CD008940099D384 /* MatchAssembly.swift in Sources */,
+				CC5985832CD3907400649C03 /* AddMatchViewController.swift in Sources */,
 				CCC1158D2CCB96340099D384 /* OnboardingAssembly.swift in Sources */,
 				CCC115652CCB905B0099D384 /* ViewControllerFactory.swift in Sources */,
 				CCC115832CCB92570099D384 /* UILabel.swift in Sources */,
+				CC5985B92CD3DB5300649C03 /* EditPlayerAssembly.swift in Sources */,
+				CC5985AC2CD3CE3B00649C03 /* EventPlayerPresentStatView.swift in Sources */,
 				CCC1157D2CCB92420099D384 /* CollectionView.swift in Sources */,
 				CCC115A52CD0085E0099D384 /* StatisticRouter.swift in Sources */,
 				CC72B22A2CD0C65500492AC9 /* TabBarRouter.swift in Sources */,
 				CCC115912CCB96440099D384 /* OnboardingCell.swift in Sources */,
 				CCC115AD2CD0087B0099D384 /* EventAssembly.swift in Sources */,
 				CC72B2492CD2197500492AC9 /* AddTeamAssembly.swift in Sources */,
+				CC5985942CD3B6AA00649C03 /* SelectTeamViewController.swift in Sources */,
+				CC5985BC2CD3E4B900649C03 /* UsageViewController.swift in Sources */,
 				CC72B2602CD23D4A00492AC9 /* TabBarAssembly.swift in Sources */,
 				CCC1158F2CCB963D0099D384 /* OnboardingRouter.swift in Sources */,
 				CCC115B52CD0089E0099D384 /* DashboardViewController.swift in Sources */,
+				CC5985962CD3B6B200649C03 /* SelectTeamAssembly.swift in Sources */,
+				CC5985BE2CD3E6A800649C03 /* LastMatchView.swift in Sources */,
+				CC5985882CD3A08000649C03 /* MatchPresentView.swift in Sources */,
 				CC72B22E2CD0C6FB00492AC9 /* SettingsViewController.swift in Sources */,
 				CCC115AF2CD008860099D384 /* MatchViewController.swift in Sources */,
+				CC5985A52CD3C80A00649C03 /* EventPlayerStatView.swift in Sources */,
 				CC72B23F2CD207EF00492AC9 /* TeamAssembly.swift in Sources */,
+				CC5985852CD3907D00649C03 /* AddMatchAssembly.swift in Sources */,
+				CC5985B22CD3D6B300649C03 /* AddPlayerViewController.swift in Sources */,
 				CC72B2542CD223B700492AC9 /* EditTeamViewController.swift in Sources */,
 				CCC115622CCB90470099D384 /* BaseRouter.swift in Sources */,
 				CCC115B12CD0088D0099D384 /* MatchRouter.swift in Sources */,
@@ -656,6 +865,8 @@
 				CCC115812CCB92510099D384 /* UIDevice.swift in Sources */,
 				CC72B25B2CD225F400492AC9 /* ChooseTeamAssembly.swift in Sources */,
 				CC72B24E2CD21BC500492AC9 /* HeaderTextField.swift in Sources */,
+				CC59858A2CD3A0C100649C03 /* CreateMatchView.swift in Sources */,
+				CC59858C2CD3B04E00649C03 /* CreateStatView.swift in Sources */,
 				CCC115A72CD008660099D384 /* StatisticAssembly.swift in Sources */,
 				CC72B23A2CD1036B00492AC9 /* BestPView.swift in Sources */,
 				CC72B25E2CD237B900492AC9 /* TeamView.swift in Sources */,
@@ -671,6 +882,7 @@
 				CC72B27B2CD29C5D00492AC9 /* MatchTableViewCell.swift in Sources */,
 				CC72B2422CD20EF100492AC9 /* EmptyCollectionViewCell.swift in Sources */,
 				CCC1155C2CCB902F0099D384 /* Setupable.swift in Sources */,
+				CC5985C12CD3E6E300649C03 /* LastEventView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,7 +1026,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5PTH9U4CB9;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 1SportsTrackerPro/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "1 Sports Tracker Pro";
@@ -828,7 +1040,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "bundle-id";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hel.sp0rts1tr4pro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -847,7 +1059,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5PTH9U4CB9;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 1SportsTrackerPro/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "1 Sports Tracker Pro";
@@ -861,7 +1073,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "bundle-id";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hel.sp0rts1tr4pro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

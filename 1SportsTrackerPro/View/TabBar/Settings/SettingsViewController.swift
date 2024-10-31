@@ -8,6 +8,7 @@
 import UIKit
 import TrackerProViewModel
 import SnapKit
+import StoreKit
 
 class SettingsViewController: BaseViewController, UICollectionViewDelegate {
 
@@ -108,15 +109,50 @@ extension SettingsViewController {
     }
 
     @objc func shareTapped() {
-        print("Tapped")
+        let appStoreURL = URL(string: "https://apps.apple.com/us/app/1-sports-tracker-pro/id6737613539")!
+
+        let activityViewController = UIActivityViewController(activityItems: [appStoreURL], applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+
+        activityViewController.excludedActivityTypes = [
+            .postToWeibo,
+            .print,
+            .assignToContact,
+            .saveToCameraRoll,
+            .addToReadingList,
+            .postToFlickr,
+            .postToVimeo,
+            .postToTencentWeibo,
+            .openInIBooks,
+            .markupAsPDF
+        ]
+
+        present(activityViewController, animated: true, completion: nil)
     }
 
     @objc func rateTapped() {
-        print("Tapped")
+        guard let scene = view.window?.windowScene else { return }
+        if #available(iOS 14.0, *) {
+            SKStoreReviewController.requestReview()
+        } else {
+            let alertController = UIAlertController(
+                title: "Enjoying the app?",
+                message: "Please consider leaving us a review in the App Store!",
+                preferredStyle: .alert
+            )
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            alertController.addAction(UIAlertAction(title: "Go to App Store", style: .default) { _ in
+                if let appStoreURL = URL(string: "https://apps.apple.com/us/app/1-sports-tracker-pro/id6737613539") {
+                    UIApplication.shared.open(appStoreURL, options: [:], completionHandler: nil)
+                }
+            })
+            present(alertController, animated: true, completion: nil)
+        }
     }
 
     @objc func usageTapped() {
-        print("Tapped")
+        guard let navigationController = self.navigationController else { return }
+        SettingsRouter.showUsageViewController(in: navigationController)
     }
 }
 

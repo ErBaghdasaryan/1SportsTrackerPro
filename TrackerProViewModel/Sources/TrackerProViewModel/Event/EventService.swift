@@ -26,12 +26,14 @@ public class EventService: IEventService {
         let db = try Connection("\(path)/db.sqlite3")
         let events = Table("Events")
         let idColumn = Expression<Int>("id")
+        let nameColumn = Expression<String>("name")
         let imageColumn = Expression<Data>("image")
         let startTimeColumn = Expression<String>("startTime")
         let dateColumn = Expression<String>("date")
 
         try db.run(events.create(ifNotExists: true) { t in
             t.column(idColumn, primaryKey: .autoincrement)
+            t.column(nameColumn)
             t.column(imageColumn)
             t.column(startTimeColumn)
             t.column(dateColumn)
@@ -42,12 +44,14 @@ public class EventService: IEventService {
         }
 
         let rowId = try db.run(events.insert(
+            nameColumn <- model.name,
             imageColumn <- imageData,
             startTimeColumn <- model.startTime,
             dateColumn <- model.date
         ))
 
         return EventModel(id: Int(rowId),
+                          name: model.name,
                           image: model.image,
                           startTime: model.startTime,
                           date: model.date)
@@ -57,6 +61,7 @@ public class EventService: IEventService {
         let db = try Connection("\(path)/db.sqlite3")
         let events = Table("Events")
         let idColumn = Expression<Int>("id")
+        let nameColumn = Expression<String>("name")
         let imageColumn = Expression<Data>("image")
         let startTimeColumn = Expression<String>("startTime")
         let dateColumn = Expression<String>("date")
@@ -69,6 +74,7 @@ public class EventService: IEventService {
             }
 
             let fetchedEvent = EventModel(id: event[idColumn],
+                                          name: event[nameColumn],
                                           image: image,
                                           startTime: event[startTimeColumn],
                                           date: event[dateColumn])
@@ -92,6 +98,7 @@ public class EventService: IEventService {
         let db = try Connection("\(path)/db.sqlite3")
         let events = Table("Events")
         let idColumn = Expression<Int>("id")
+        let nameColumn = Expression<String>("name")
         let imageColumn = Expression<Data>("image")
         let startTimeColumn = Expression<String>("startTime")
         let dateColumn = Expression<String>("date")
@@ -102,6 +109,7 @@ public class EventService: IEventService {
 
         let evnetToUpdate = events.filter(idColumn == event.id!)
         try db.run(evnetToUpdate.update(
+            nameColumn <- event.name,
             imageColumn <- imageData,
             startTimeColumn <- event.startTime,
             dateColumn <- event.date

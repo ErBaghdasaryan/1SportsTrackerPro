@@ -76,6 +76,8 @@ class MatchViewController: BaseViewController, UICollectionViewDelegate {
             view.trailing.equalToSuperview().inset(16)
             view.bottom.equalToSuperview()
         }
+
+        tableView.contentInset = UIEdgeInsets(top: -25, left: 0, bottom: 0, right: 0    )
     }
 
     private func setupTableView() {
@@ -96,7 +98,24 @@ extension MatchViewController: IViewModelableController {
 //MARK: Progress View
 extension MatchViewController {
     private func makeButtonActions() {
-        
+        add.addTarget(self, action: #selector(addMatch), for: .touchUpInside)
+    }
+
+    @objc func addMatch() {
+        guard let navigationController = self.navigationController else { return }
+        guard let subject = self.viewModel?.activateSuccessSubject else { return }
+
+        MatchRouter.showAddMatchViewController(in: navigationController,
+                                               navigationModel: .init(activateSuccessSubject: subject))
+    }
+
+    private func editMatch(for index: Int) {
+        guard let navigationController = self.navigationController else { return }
+        guard let subject = self.viewModel?.activateSuccessSubject else { return }
+
+        let model = self.viewModel?.matches[index]
+
+        MatchRouter.showEditmatchViewController(in: navigationController, navigationModel: .init(activateSuccessSubject: subject, model: model!))
     }
 }
 
@@ -132,7 +151,7 @@ extension MatchViewController:  UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.editBet(for: indexPath.row)
+        self.editMatch(for: indexPath.row)
     }
 }
 

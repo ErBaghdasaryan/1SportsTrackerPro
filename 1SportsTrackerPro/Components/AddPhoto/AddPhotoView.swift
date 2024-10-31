@@ -9,8 +9,8 @@ import UIKit
 import TrackerProModel
 
 final class AddPhotoView: UIView {
-    private let defaultImage = UIImageView(image: UIImage(named: "addImage"))
-    private var image = UIImageView()
+    public let defaultImage = UIImageView(image: UIImage(named: "addImage"))
+    public var image = UIImageView()
 
     public init() {
         super.init(frame: .zero)

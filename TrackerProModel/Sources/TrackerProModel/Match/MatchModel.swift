@@ -39,4 +39,10 @@ public struct MatchModel {
         self.playerNumber = playerNumber
         self.isVictory = isVictory
     }
+
+    public var totalScore: Int {
+        let firstScoreInt = Int(firstScore) ?? 0
+        let secondScoreInt = Int(secondScore) ?? 0
+        return firstScoreInt + secondScoreInt
+    }
 }
