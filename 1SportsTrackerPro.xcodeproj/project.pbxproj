@@ -98,7 +98,6 @@
 		CCC1159F2CD008470099D384 /* PlayersAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC1159E2CD008470099D384 /* PlayersAssembly.swift */; };
 		CCC115A12CD0084D0099D384 /* PlayersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115A02CD0084D0099D384 /* PlayersRouter.swift */; };
 		CCC115A32CD008560099D384 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115A22CD008560099D384 /* StatisticViewController.swift */; };
-		CCC115A52CD0085E0099D384 /* StatisticRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115A42CD0085E0099D384 /* StatisticRouter.swift */; };
 		CCC115A72CD008660099D384 /* StatisticAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115A62CD008660099D384 /* StatisticAssembly.swift */; };
 		CCC115A92CD0086F0099D384 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115A82CD0086F0099D384 /* EventViewController.swift */; };
 		CCC115AB2CD008750099D384 /* EventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115AA2CD008750099D384 /* EventRouter.swift */; };
@@ -107,7 +106,6 @@
 		CCC115B12CD0088D0099D384 /* MatchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115B02CD0088D0099D384 /* MatchRouter.swift */; };
 		CCC115B32CD008940099D384 /* MatchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115B22CD008940099D384 /* MatchAssembly.swift */; };
 		CCC115B52CD0089E0099D384 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115B42CD0089E0099D384 /* DashboardViewController.swift */; };
-		CCC115B72CD008A60099D384 /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115B62CD008A60099D384 /* DashboardRouter.swift */; };
 		CCC115B92CD008AD0099D384 /* DashboardAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC115B82CD008AD0099D384 /* DashboardAssembly.swift */; };
 /* End PBXBuildFile section */
 
@@ -201,7 +199,6 @@
 		CCC1159E2CD008470099D384 /* PlayersAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersAssembly.swift; sourceTree = "<group>"; };
 		CCC115A02CD0084D0099D384 /* PlayersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersRouter.swift; sourceTree = "<group>"; };
 		CCC115A22CD008560099D384 /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
-		CCC115A42CD0085E0099D384 /* StatisticRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticRouter.swift; sourceTree = "<group>"; };
 		CCC115A62CD008660099D384 /* StatisticAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticAssembly.swift; sourceTree = "<group>"; };
 		CCC115A82CD0086F0099D384 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		CCC115AA2CD008750099D384 /* EventRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRouter.swift; sourceTree = "<group>"; };
@@ -210,7 +207,6 @@
 		CCC115B02CD0088D0099D384 /* MatchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchRouter.swift; sourceTree = "<group>"; };
 		CCC115B22CD008940099D384 /* MatchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchAssembly.swift; sourceTree = "<group>"; };
 		CCC115B42CD0089E0099D384 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		CCC115B62CD008A60099D384 /* DashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouter.swift; sourceTree = "<group>"; };
 		CCC115B82CD008AD0099D384 /* DashboardAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -354,13 +350,6 @@
 				CC72B2312CD0C70A00492AC9 /* SettingsRouter.swift */,
 			);
 			path = Settings;
-			sourceTree = "<group>";
-		};
-		CC72B22C2CD0C6EE00492AC9 /* Rules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Rules;
 			sourceTree = "<group>";
 		};
 		CC72B2332CD0D5A800492AC9 /* SettingsView */ = {
@@ -637,7 +626,6 @@
 				CC5985922CD3B69500649C03 /* SelectTeam */,
 				CC72B2572CD225DF00492AC9 /* ChooseTeam */,
 				CC72B23B2CD207DD00492AC9 /* Team */,
-				CC72B22C2CD0C6EE00492AC9 /* Rules */,
 				CC72B22B2CD0C6E600492AC9 /* Settings */,
 				CCC115932CCFCF980099D384 /* TabBarViewController.swift */,
 				CC72B2292CD0C65500492AC9 /* TabBarRouter.swift */,
@@ -650,7 +638,6 @@
 			isa = PBXGroup;
 			children = (
 				CCC115B42CD0089E0099D384 /* DashboardViewController.swift */,
-				CCC115B62CD008A60099D384 /* DashboardRouter.swift */,
 				CCC115B82CD008AD0099D384 /* DashboardAssembly.swift */,
 			);
 			path = Dashboard;
@@ -686,7 +673,6 @@
 			isa = PBXGroup;
 			children = (
 				CCC115A22CD008560099D384 /* StatisticViewController.swift */,
-				CCC115A42CD0085E0099D384 /* StatisticRouter.swift */,
 				CCC115A62CD008660099D384 /* StatisticAssembly.swift */,
 			);
 			path = Statistic;
@@ -817,7 +803,6 @@
 				CCC115A92CD0086F0099D384 /* EventViewController.swift in Sources */,
 				CCC115A12CD0084D0099D384 /* PlayersRouter.swift in Sources */,
 				CCC115A32CD008560099D384 /* StatisticViewController.swift in Sources */,
-				CCC115B72CD008A60099D384 /* DashboardRouter.swift in Sources */,
 				CC5985B72CD3DB4C00649C03 /* EditPlayerViewController.swift in Sources */,
 				CC72B2442CD2107100492AC9 /* TeamCollectionViewCell.swift in Sources */,
 				CC72B27D2CD2ACFC00492AC9 /* EmptyTableViewCell.swift in Sources */,
@@ -837,7 +822,6 @@
 				CC5985B92CD3DB5300649C03 /* EditPlayerAssembly.swift in Sources */,
 				CC5985AC2CD3CE3B00649C03 /* EventPlayerPresentStatView.swift in Sources */,
 				CCC1157D2CCB92420099D384 /* CollectionView.swift in Sources */,
-				CCC115A52CD0085E0099D384 /* StatisticRouter.swift in Sources */,
 				CC72B22A2CD0C65500492AC9 /* TabBarRouter.swift in Sources */,
 				CCC115912CCB96440099D384 /* OnboardingCell.swift in Sources */,
 				CCC115AD2CD0087B0099D384 /* EventAssembly.swift in Sources */,

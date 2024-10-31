@@ -188,7 +188,6 @@ extension ChooseTeamViewController: UICollectionViewDataSource, UICollectionView
             return CGSize(width: collectionView.frame.width, height: 150)
         } else {
             let numberOfColumns: CGFloat = 2
-            let spacing: CGFloat = 10
 
             let layout = collectionViewLayout as! UICollectionViewFlowLayout
             let totalSpacing = layout.sectionInset.left + layout.sectionInset.right + ((numberOfColumns - 1) * layout.minimumInteritemSpacing)

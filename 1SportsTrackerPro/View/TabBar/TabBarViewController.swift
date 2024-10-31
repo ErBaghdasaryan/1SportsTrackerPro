@@ -95,7 +95,7 @@ class TabBarViewController: UITabBarController {
         self.tabBar.barTintColor = UIColor(hex: "#001724")?.withAlphaComponent(0.5)
         self.tabBar.isTranslucent = false
 
-        let unselectedImage = UIImage(named: image)?.withRenderingMode(.alwaysTemplate)
+        _ = UIImage(named: image)?.withRenderingMode(.alwaysTemplate)
         let selectedImage = UIImage(named: image)?.withTintColor(.white, renderingMode: .alwaysTemplate)
 
         navigation.tabBarItem.image = UIImage(named: image)
