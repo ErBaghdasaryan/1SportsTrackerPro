@@ -42,10 +42,10 @@ class UntilOnboardingViewController: BaseViewController, UICollectionViewDelegat
     func setupConstraints() {
 
         logoImage.snp.makeConstraints { view in
-            view.top.equalToSuperview().offset(276)
+            view.centerY.equalToSuperview()
             view.centerX.equalToSuperview()
-            view.height.equalTo(168)
-            view.width.equalTo(157)
+            view.height.equalTo(200)
+            view.width.equalTo(200)
         }
 
         activityIndicator.snp.makeConstraints { view in
