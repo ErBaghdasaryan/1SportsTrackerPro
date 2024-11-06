@@ -45,4 +45,5 @@ public enum StorageKeys: String {
     case isAlreadyOpened = "isAlreadyOpened"
     case teamName = "teamName"
     case teamImage = "teamImage"
+    case alreadyOpened = "alreadyOpened"
 }

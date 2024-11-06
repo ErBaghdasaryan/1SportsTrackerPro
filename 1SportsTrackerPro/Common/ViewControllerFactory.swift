@@ -168,4 +168,28 @@ final class ViewControllerFactory {
         viewController.viewModel = assembler.resolver.resolve(IEditPlayerViewModel.self, argument: navigationModel)
         return viewController
     }
+
+    //MARK: Details
+    static func makeDetailsViewController() -> DetailViewController {
+        let assembler = Assembler(commonAssemblies + [DetailAssembly()])
+        let viewController = DetailViewController()
+        viewController.viewModel = assembler.resolver.resolve(IDetailViewModel.self)
+        return viewController
+    }
+
+    //MARK: Filter
+    static func makeFilterViewController() -> FilterViewController {
+        let assembler = Assembler(commonAssemblies + [FilterAssembly()])
+        let viewController = FilterViewController()
+        viewController.viewModel = assembler.resolver.resolve(IFilterViewModel.self)
+        return viewController
+    }
+
+    //MARK: Profile
+    static func makeProfileViewController() -> ProfileViewController {
+        let assembler = Assembler(commonAssemblies + [ProfileAssembly()])
+        let viewController = ProfileViewController()
+        viewController.viewModel = assembler.resolver.resolve(IProfileViewModel.self)
+        return viewController
+    }
 }
